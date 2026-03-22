@@ -49,51 +49,33 @@ function Home() {
     },
   ];
 
-  const featuredProducts = [
-    {
-      id: 1,
-      name: "Classic White Shirt",
-      price: 49.99,
-      image:
-        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      rating: 4.8,
-    },
-    {
-      id: 2,
-      name: "Denim Jacket",
-      price: 89.99,
-      image:
-        "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      rating: 4.6,
-    },
-    {
-      id: 3,
-      name: "Chino Pants",
-      price: 59.99,
-      image:
-        "https://images.unsplash.com/photo-1584864783592-f1d6d4fcd1d0?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      rating: 4.7,
-    },
-    {
-      id: 4,
-      name: "Leather Shoes",
-      price: 129.99,
-      image:
-        "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      rating: 4.9,
-    },
-  ];
   const fetcher = (url) => axios.get(url).then((res) => res.data);
-  const { data, isLoading,error } = useSWR(
+  const { data, isLoading, error } = useSWR(
     "https://fakestoreapi.com/products",
     fetcher,
   );
-   if (error) return <strong 
-  style={{ display: "flex", fontSize: "20px",color: "red", justifyContent: "center", marginTop: "50px" }}
-  >Failed to load products!</strong>;
-  if (isLoading) return <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
-      <Spinner />
-    </div>;
+  if (error)
+    return (
+      <strong
+        style={{
+          display: "flex",
+          fontSize: "20px",
+          color: "red",
+          justifyContent: "center",
+          marginTop: "50px",
+        }}
+      >
+        Failed to load products!
+      </strong>
+    );
+  if (isLoading)
+    return (
+      <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}
+      >
+        <Spinner />
+      </div>
+    );
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -107,7 +89,7 @@ function Home() {
         <HeroSlideshow />
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            Discover Premium Men&apos;s Fashion
+            Discover Premium Fashion
           </h1>
           <p className={styles.heroSubtitle}>
             From casual wear to formal attire, find the perfect style that
@@ -133,36 +115,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className={styles.categories}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Shop by Category</h2>
-          <div className={styles.categoriesGrid}>
-            {categories.map((category, index) => (
-              <Link
-                key={index}
-                href={`/category/${category.name.toLowerCase()}`}
-                className={styles.categoryCard}
-              >
-                <div className={styles.categoryImage}>
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className={styles.categoryImg}
-                  />
-                </div>
-                <div className={styles.categoryInfo}>
-                  <h3 className={styles.categoryName}>{category.name}</h3>
-                  <p className={styles.categoryCount}>{category.count} items</p>
-                  <button className={styles.categoryButton}>
-                    Shop Now <FiChevronRight />
-                  </button>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Featured Products */}
       <section className={styles.featured}>
@@ -202,6 +155,36 @@ function Home() {
         </div>
       </section>
 
+{/* Categories Section */}
+      <section className={styles.categories}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>Shop by Category</h2>
+          <div className={styles.categoriesGrid}>
+            {categories.map((category, index) => (
+              <Link
+                key={index}
+                href={`/category/${category.name.toLowerCase()}`}
+                className={styles.categoryCard}
+              >
+                <div className={styles.categoryImage}>
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className={styles.categoryImg}
+                  />
+                </div>
+                <div className={styles.categoryInfo}>
+                  <h3 className={styles.categoryName}>{category.name}</h3>
+                  <p className={styles.categoryCount}>{category.count} items</p>
+                  <button className={styles.categoryButton}>
+                    Shop Now <FiChevronRight />
+                  </button>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Newsletter Section */}
       {/* <section className={styles.newsletter}>
         <div className={styles.container}>
