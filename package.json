@@ -1,0 +1,24 @@
+{
+  "name": "famstep-shop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "antd": "^6.3.3",
+    "axios": "^1.13.6",
+    "next": "14.2.23",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.6.0",
+    "swr": "^2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.23"
+  }
+}

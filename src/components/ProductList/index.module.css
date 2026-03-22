@@ -1,0 +1,357 @@
+.productListContainer {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.productCount {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filterLabel {
+  font-weight: 600;
+  color: #2c2c2c;
+  font-size: 14px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.filterSelect:focus {
+  border-color: #25a195;
+}
+
+.priceRange {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rangeSlider {
+  width: 100px;
+}
+
+.viewControls {
+  display: flex;
+  gap: 10px;
+}
+
+.viewButton {
+  padding: 10px;
+  border: 2px solid #e5e5e5;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.viewButton:hover {
+  border-color: #25a195;
+}
+
+.viewButton.active {
+  background: #25a195;
+  color: white;
+  border-color: #25a195;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.productsGrid.listView {
+  grid-template-columns: 1fr;
+}
+
+.productCard {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.productLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.productImage {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.productImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover .productImg {
+  transform: scale(1.05);
+}
+
+.productOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.productCard:hover .productOverlay {
+  opacity: 1;
+}
+
+.quickViewButton {
+  background: #25a195;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quickViewButton:hover {
+  background: #78dcd2;
+}
+
+.productInfo {
+  padding: 20px;
+}
+
+.productName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+
+.productRating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #25a195;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.starIcon {
+  font-size: 14px;
+}
+
+.productPrice {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #25a195;
+  margin-bottom: 8px;
+}
+
+.productColors,
+.productSizes {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.colorLabel,
+.sizeLabel {
+  font-weight: 500;
+}
+
+.productActions {
+  padding: 0 20px 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.addToCartButton {
+  flex: 1;
+  background: #25a195;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addToCartButton:hover {
+  background: #78dcd2;
+}
+
+.wishlistButton {
+  background: #f8f9fa;
+  color: #666;
+  border: 2px solid #e5e5e5;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.wishlistButton:hover {
+  background: #25a195;
+  color: white;
+  border-color: #25a195;
+}
+
+.noProducts {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.noProducts h3 {
+  font-size: 1.5rem;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.noProducts p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* List View Styles */
+.productsGrid.listView .productCard {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+}
+
+.productsGrid.listView .productImage {
+  width: 200px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.productsGrid.listView .productInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productsGrid.listView .productActions {
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .productListContainer {
+    padding: 20px 10px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .productsGrid.listView .productCard {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .productsGrid.listView .productImage {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+}

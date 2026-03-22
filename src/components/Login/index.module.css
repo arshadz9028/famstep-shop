@@ -1,0 +1,241 @@
+.authContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+}
+
+.authCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.authHeader {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.backButton:hover {
+  background: #f8f9fa;
+  color: #25a195;
+}
+
+.authTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+
+.authSubtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+.authForm {
+  margin-bottom: 30px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.inputLabel {
+  display: block;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 15px;
+  color: #666;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 15px 15px 50px;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.input:focus {
+  border-color: #25a195;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.passwordToggle:hover {
+  color: #25a195;
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.forgotLink {
+  color: #25a195;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgotLink:hover {
+  color: #25a195;
+}
+
+.submitButton {
+  width: 100%;
+  background: #25a195;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #25a195;
+}
+
+.submitButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.divider {
+  text-align: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.divider span {
+  background: white;
+  padding: 0 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.googleButton {
+  width: 100%;
+  background: white;
+  color: #2c2c2c;
+  border: 2px solid #e5e5e5;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.googleButton:hover {
+  border-color: #25a195;
+  background: #f8f9fa;
+}
+
+.googleIcon {
+  font-size: 20px;
+}
+
+.authFooter {
+  text-align: center;
+}
+
+.authFooter p {
+  color: #666;
+  font-size: 14px;
+}
+
+.authLink {
+  color: #25a195;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.authLink:hover {
+  color: #25a195;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .authContainer {
+    padding: 10px;
+  }
+
+  .authCard {
+    padding: 30px 20px;
+  }
+
+  .authTitle {
+    font-size: 1.8rem;
+  }
+}
